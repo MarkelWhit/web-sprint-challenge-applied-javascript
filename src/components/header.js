@@ -1,5 +1,5 @@
-const headEntry = document.querySelector(".header-container");
-const Header = (title, date, temp) => {
+const headEntry = document.querySelector('.header-container');
+const Header = ({title, date, temp}) => {
   const head = document.createElement("div");
   const dateSpan = document.createElement("span");
   const headTitle = document.createElement("h1");
@@ -36,7 +36,7 @@ const Header = (title, date, temp) => {
   //
 
 function headerAppender(){
-  headEntry.appendChild(Header({title:'Happy Days', date:'11/07/1993', temp:'97degrees'}))
+  headEntry.appendChild(Header({title: 'Happy Days', date: '11/07/1993', temp: '97degrees'}))
 
 }
 
