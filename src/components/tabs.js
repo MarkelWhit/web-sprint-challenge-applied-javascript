@@ -47,9 +47,9 @@ axios.get('https://lambda-times-api.herokuapp.com/topics')
   // The tags used, the hierarchy of elements and their attributes must match the provided markup!
   // The text inside elements will be set using their `textContent` property (NOT `innerText`).
  
-  const tabsAppender = (topics) => {
+  const tabsAppender = () => {
   
-Entrypoint.appendChild(Tabs({topics}))
+//Entrypoint.appendChild(Tabs({topics}))
   // TASK 4
   // ---------------------
   // Implement this function which takes a css selector as its only argument.

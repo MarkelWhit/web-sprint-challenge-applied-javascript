@@ -45,7 +45,8 @@ const Card = ({ headline, authorPhoto, author, }) => {
   //
   return cards
 }
-entryPoint.appendChild(Card({}))
+
+
 const cardAppender = () => {
 
 // TASK 6
@@ -59,8 +60,11 @@ const cardAppender = () => {
 
 //}
 axios.get('https://lambda-times-api.herokuapp.com/articles')
-  .then(res => {
-    console.log(res.data)
+  .then(res => {console.log(res.data.articles.javascript)
+    res.data.articles.javascript.forEach(uArticle => {
+      const cardComp = Card({ uArticle })
+      entryPoint.appendChild(cardComp)
+    })
   })
   .catch(err => {
     console.log(err)
